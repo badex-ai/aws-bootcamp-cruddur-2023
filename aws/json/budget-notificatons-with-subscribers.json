@@ -6,7 +6,7 @@
 			"Threshold": 80,
 			"ThresholdType": "PERCENTAGE"
 		},
-		"Subscribers": [
+		"Subscribers": [ 
 			{
 				"Address": "****adx@gmail.com",
 				"SubscriptionType": "EMAIL"

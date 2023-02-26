@@ -9,7 +9,7 @@
 	"ComparisonOperator": "GreaterThanOrEqualToThreshold",
 	"TreatMissingData": "breaching",
 	"Metrics": [
-		{
+		{ 
 			"Id": "m1",
 			"MetricStat": {
 				"Metric": {
