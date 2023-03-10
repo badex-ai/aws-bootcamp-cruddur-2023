@@ -14,7 +14,25 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 
+# Honeycomb --------
+# Initalize tracing and exorter that can send data to Honeycomb
+provider = TracerProvider()
+processor = BatchSpanProcessor(OTLPSpanExporter())
+provider.add_span_processor(processor)
+trace.set_tracer_provider(provider)
+tracer = trace.get_tracer(__name__)
+
+
+
 app = Flask(__name__)
+
+# Honeycomb
+#Initialize automatic instrumentation with Flask
+FlaskInstrumentor().instrument_app(app)
+RequestsInstrumentor().instrument()
+
+
+
 frontend = os.getenv('FRONTEND_URL')
 backend = os.getenv('BACKEND_URL')
 origins = [frontend, backend]
