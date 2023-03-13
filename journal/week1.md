@@ -70,3 +70,6 @@ The backend route is created using flask python and the data which we use is sta
 So we create a new service named notification_activities.py which returns a result, import it into the app.py file and create a new route which we can access from the frontend application.
 
 We implement the request on the frontend application and then fix the route names and link
+
+
+![docker desktop running image](./assets/docker_desktop.png)
